@@ -251,27 +251,6 @@ class XZTG:
         rch = np.round((v2 / v1) - 1, 4)
         return rch
 
-    def bool_comparisson(self, 
-                         v1, 
-                         v2):
-        """
-        Compare two values and return a boolean result.
-
-        Args:
-            v1: The first value.
-            v2: The second value.
-
-        Returns:
-            bool: True if the values are different, False if they are the same.
-
-        Summary:
-            Compares two values for equality and returns the opposite boolean result.
-        """
-        if v1 == v2:
-            return False
-        else:
-            return True
-
     def dtest(self,
               c1,
               distance):
@@ -415,10 +394,6 @@ class XZTG:
             cells_df['BAU_XFactor'], cells_df['ADJ_XFactor'])
         cells_df['VAR_ZUniverse'] = self.relative_change(
             cells_df['BAU_ZUniverse'], cells_df['VUE_ZUniverse'])
-        cells_df['Change in XPanel'] = cells_df.apply(
-            lambda row: self.bool_comparisson(
-                row['VUE_XPanel'], row['ADJ_XPanel']),
-            axis=1)
         return cells_df
 
     def set_cell_flags(self, 
