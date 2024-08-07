@@ -1,0 +1,502 @@
+INDEX,CHANNEL,SAMPLE,Cell_ID,StoreTypeChannel,NielsenArea,StoreType
+CERVEZAS,MONT,20000211,10003437,Autoservicios,1:atlantico,1:supermercados
+CERVEZAS,MONT,20000211,10003616,Autoservicios,6:centro,1:supermercados
+CERVEZAS,MONT,20000211,10003547,Autoservicios,3:santanderes,1:supermercados
+CERVEZAS,MONT,20000211,10003436,Autoservicios,1:atlantico,1:supermercados
+CERVEZAS,MONT,20000211,10003644,Autoservicios,8:pacifico,1:supermercados
+CERVEZAS,MONT,20000211,10003724,Consumo Local,8:pacifico,11:bar
+CERVEZAS,MONT,20000211,10003513,Autoservicios,2:antioquia_choco,1:supermercados
+CERVEZAS,MONT,20000211,10003486,Autoservicios,1:atlantico,1:supermercados
+CERVEZAS,MONT,20000211,10003546,Autoservicios,3:santanderes,1:supermercados
+CERVEZAS,MONT,20000211,10003569,Autoservicios,4:cundi_boy,1:supermercados
+CERVEZAS,MONT,20000211,10003438,Autoservicios,1:atlantico,1:supermercados
+CERVEZAS,MONT,20000211,10003601,Autoservicios,5:eje_cafetero,1:supermercados
+CERVEZAS,MONT,20000211,10003548,Autoservicios,3:santanderes,1:supermercados
+CERVEZAS,MONT,20000211,10003567,Autoservicios,4:cundi_boy,1:supermercados
+CERVEZAS,MONT,20000211,10003439,Autoservicios,1:atlantico,1:supermercados
+CERVEZAS,MONT,20000211,10003600,Autoservicios,5:eje_cafetero,1:supermercados
+CERVEZAS,MONT,20000211,10003514,Autoservicios,2:antioquia_choco,1:supermercados
+CERVEZAS,MONT,20000211,10003626,Autoservicios,7:llanos,1:supermercados
+CERVEZAS,MONT,20000211,10003511,Autoservicios,2:antioquia_choco,1:supermercados
+CERVEZAS,MONT,20000211,10003512,Autoservicios,2:antioquia_choco,1:supermercados
+CERVEZAS,MONT,20000211,10003515,Autoservicios,2:antioquia_choco,1:supermercados
+CERVEZAS,MONT,20000211,10003643,Autoservicios,8:pacifico,1:supermercados
+CERVEZAS,MONT,20000211,10003642,Autoservicios,8:pacifico,1:supermercados
+CERVEZAS,MONT,20000211,10003510,Autoservicios,4:cundi_boy,1:supermercados
+CERVEZAS,MONT,20000211,10003640,Autoservicios,8:pacifico,1:supermercados
+CERVEZAS,MONT,20000211,10003627,Autoservicios,7:llanos,1:supermercados
+CERVEZAS,MONT,20000211,10003628,Autoservicios,7:llanos,1:supermercados
+CERVEZAS,MONT,20000211,10003641,Autoservicios,8:pacifico,1:supermercados
+CERVEZAS,MONT,20000211,10003509,Autoservicios,4:cundi_boy,1:supermercados
+CERVEZAS,MONT,20000211,10003549,Autoservicios,3:santanderes,1:supermercados
+CERVEZAS,MONT,20000211,10003566,Autoservicios,4:cundi_boy,1:supermercados
+CERVEZAS,MONT,20000211,10003568,Autoservicios,4:cundi_boy,1:supermercados
+CERVEZAS,MONT,20000211,10003440,Autoservicios,1:atlantico,1:supermercados
+CERVEZAS,MONT,20000211,10003599,Autoservicios,5:eje_cafetero,1:supermercados
+CERVEZAS,MONT,20000211,10003434,Autoservicios,1:atlantico,1:supermercados
+CERVEZAS,MONT,20000211,10003702,Consumo Local,8:pacifico,15:restaurante
+CERVEZAS,MONT,20000211,10003468,Autoservicios,2:antioquia_choco,1:supermercados
+CERVEZAS,MONT,20000211,10003469,Autoservicios,2:antioquia_choco,1:supermercados
+CERVEZAS,MONT,20000211,10003615,Autoservicios,6:centro,1:supermercados
+CERVEZAS,MONT,20000211,10003572,Autoservicios,4:cundi_boy,1:supermercados
+CERVEZAS,MONT,20000211,10003479,Consumo Local,1:atlantico,11:bar
+CERVEZAS,MONT,20000211,10003480,Consumo Local,1:atlantico,11:bar
+CERVEZAS,MONT,20000211,10003712,Consumo Local,5:eje_cafetero,11:bar
+CERVEZAS,MONT,20000211,10003723,Consumo Local,8:pacifico,11:bar
+CERVEZAS,MONT,20000211,10003715,Consumo Local,6:centro,11:bar
+CERVEZAS,MONT,20000211,10003847,Consumo Local,2:antioquia_choco,11:bar
+CERVEZAS,MONT,20000211,10003717,Consumo Local,7:llanos,11:bar
+CERVEZAS,MONT,20000211,10003718,Consumo Local,7:llanos,11:bar
+CERVEZAS,MONT,20000211,10003709,Consumo Local,4:cundi_boy,11:bar
+CERVEZAS,MONT,20000211,10003481,Consumo Local,1:atlantico,11:bar
+CERVEZAS,MONT,20000211,10003483,Consumo Local,1:atlantico,11:bar
+CERVEZAS,MONT,20000211,10003878,Consumo Local,3:santanderes,11:bar
+CERVEZAS,MONT,20000211,10003482,Consumo Local,1:atlantico,11:bar
+CERVEZAS,MONT,20000211,10003714,Consumo Local,5:eje_cafetero,11:bar
+CERVEZAS,MONT,20000211,10003805,Consumo Local,8:pacifico,15:restaurante
+CERVEZAS,MONT,20000211,10003706,Consumo Local,4:cundi_boy,11:bar
+CERVEZAS,MONT,20000211,10003708,Consumo Local,4:cundi_boy,11:bar
+CERVEZAS,MONT,20000211,10003705,Consumo Local,4:cundi_boy,11:bar
+CERVEZAS,MONT,20000211,10003517,Consumo Local,2:antioquia_choco,11:bar
+CERVEZAS,MONT,20000211,10003710,Consumo Local,4:cundi_boy,11:bar
+CERVEZAS,MONT,20000211,10003485,Consumo Local,1:atlantico,11:bar
+CERVEZAS,MONT,20000211,10003850,Consumo Local,2:antioquia_choco,11:bar
+CERVEZAS,MONT,20000211,10003880,Consumo Local,3:santanderes,11:bar
+CERVEZAS,MONT,20000211,10003881,Consumo Local,3:santanderes,11:bar
+CERVEZAS,MONT,20000211,10003711,Consumo Local,4:cundi_boy,11:bar
+CERVEZAS,MONT,20000211,10003851,Consumo Local,2:antioquia_choco,11:bar
+CERVEZAS,MONT,20000211,10003707,Consumo Local,4:cundi_boy,11:bar
+CERVEZAS,MONT,20000211,10003484,Consumo Local,1:atlantico,11:bar
+CERVEZAS,MONT,20000211,10003848,Consumo Local,2:antioquia_choco,11:bar
+CERVEZAS,MONT,20000211,10003849,Consumo Local,2:antioquia_choco,11:bar
+CERVEZAS,MONT,20000211,10003720,Consumo Local,8:pacifico,11:bar
+CERVEZAS,MONT,20000211,10003721,Consumo Local,8:pacifico,11:bar
+CERVEZAS,MONT,20000211,10003722,Consumo Local,8:pacifico,11:bar
+CERVEZAS,MONT,20000211,10003651,Autoservicios,8:pacifico,3:minimercado
+CERVEZAS,MONT,20000211,10003713,Consumo Local,5:eje_cafetero,11:bar
+CERVEZAS,MONT,20000211,10003719,Consumo Local,7:llanos,11:bar
+CERVEZAS,MONT,20000211,10003843,Consumo Local,8:pacifico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003716,Consumo Local,6:centro,11:bar
+CERVEZAS,MONT,20000211,10003879,Consumo Local,3:santanderes,11:bar
+CERVEZAS,MONT,20000211,10003516,Consumo Local,2:antioquia_choco,11:bar
+CERVEZAS,MONT,20000211,10003570,Consumo Local,4:cundi_boy,12:discoteca
+CERVEZAS,MONT,20000211,10003478,Consumo Local,6:centro,12:discoteca
+CERVEZAS,MONT,20000211,10003625,Consumo Local,7:llanos,12:discoteca
+CERVEZAS,MONT,20000211,10003639,Consumo Local,8:pacifico,12:discoteca
+CERVEZAS,MONT,20000211,10003476,Consumo Local,3:santanderes,12:discoteca
+CERVEZAS,MONT,20000211,10003571,Consumo Local,4:cundi_boy,12:discoteca
+CERVEZAS,MONT,20000211,10003477,Consumo Local,5:eje_cafetero,12:discoteca
+CERVEZAS,MONT,20000211,10003518,Consumo Local,2:antioquia_choco,12:discoteca
+CERVEZAS,MONT,20000211,10003435,Consumo Local,1:atlantico,12:discoteca
+CERVEZAS,MONT,20000211,10003861,Consumo Local,2:antioquia_choco,15:restaurante
+CERVEZAS,MONT,20000211,10003863,Consumo Local,2:antioquia_choco,15:restaurante
+CERVEZAS,MONT,20000211,10003676,Consumo Local,1:atlantico,15:restaurante
+CERVEZAS,MONT,20000211,10003787,Consumo Local,4:cundi_boy,15:restaurante
+CERVEZAS,MONT,20000211,10003797,Consumo Local,7:llanos,15:restaurante
+CERVEZAS,MONT,20000211,10003792,Consumo Local,5:eje_cafetero,15:restaurante
+CERVEZAS,MONT,20000211,10003802,Consumo Local,8:pacifico,15:restaurante
+CERVEZAS,MONT,20000211,10003828,Consumo Local,8:pacifico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003865,Consumo Local,2:antioquia_choco,15:restaurante
+CERVEZAS,MONT,20000211,10003699,Consumo Local,8:pacifico,15:restaurante
+CERVEZAS,MONT,20000211,10003683,Consumo Local,4:cundi_boy,15:restaurante
+CERVEZAS,MONT,20000211,10003786,Consumo Local,4:cundi_boy,15:restaurante
+CERVEZAS,MONT,20000211,10003864,Consumo Local,2:antioquia_choco,15:restaurante
+CERVEZAS,MONT,20000211,10003692,Consumo Local,5:eje_cafetero,15:restaurante
+CERVEZAS,MONT,20000211,10003781,Consumo Local,4:cundi_boy,15:restaurante
+CERVEZAS,MONT,20000211,10003684,Consumo Local,4:cundi_boy,15:restaurante
+CERVEZAS,MONT,20000211,10003489,Consumo Local,1:atlantico,15:restaurante
+CERVEZAS,MONT,20000211,10003799,Consumo Local,7:llanos,15:restaurante
+CERVEZAS,MONT,20000211,10003660,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003884,Consumo Local,3:santanderes,15:restaurante
+CERVEZAS,MONT,20000211,10003856,Consumo Local,2:antioquia_choco,15:restaurante
+CERVEZAS,MONT,20000211,10003700,Consumo Local,8:pacifico,15:restaurante
+CERVEZAS,MONT,20000211,10003775,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003675,Consumo Local,1:atlantico,15:restaurante
+CERVEZAS,MONT,20000211,10003782,Consumo Local,4:cundi_boy,15:restaurante
+CERVEZAS,MONT,20000211,10003862,Consumo Local,2:antioquia_choco,15:restaurante
+CERVEZAS,MONT,20000211,10003888,Consumo Local,3:santanderes,15:restaurante
+CERVEZAS,MONT,20000211,10003774,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003672,Consumo Local,1:atlantico,15:restaurante
+CERVEZAS,MONT,20000211,10003804,Consumo Local,8:pacifico,15:restaurante
+CERVEZAS,MONT,20000211,10003882,Consumo Local,3:santanderes,15:restaurante
+CERVEZAS,MONT,20000211,10003673,Consumo Local,1:atlantico,15:restaurante
+CERVEZAS,MONT,20000211,10003659,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003678,Consumo Local,1:atlantico,15:restaurante
+CERVEZAS,MONT,20000211,10003674,Consumo Local,1:atlantico,15:restaurante
+CERVEZAS,MONT,20000211,10003785,Consumo Local,4:cundi_boy,15:restaurante
+CERVEZAS,MONT,20000211,10003795,Consumo Local,6:centro,15:restaurante
+CERVEZAS,MONT,20000211,10003691,Consumo Local,5:eje_cafetero,15:restaurante
+CERVEZAS,MONT,20000211,10003794,Consumo Local,6:centro,15:restaurante
+CERVEZAS,MONT,20000211,10003796,Consumo Local,7:llanos,15:restaurante
+CERVEZAS,MONT,20000211,10003801,Consumo Local,8:pacifico,15:restaurante
+CERVEZAS,MONT,20000211,10003685,Consumo Local,4:cundi_boy,15:restaurante
+CERVEZAS,MONT,20000211,10003491,Consumo Local,1:atlantico,15:restaurante
+CERVEZAS,MONT,20000211,10003520,Consumo Local,2:antioquia_choco,15:restaurante
+CERVEZAS,MONT,20000211,10003790,Consumo Local,5:eje_cafetero,15:restaurante
+CERVEZAS,MONT,20000211,10003688,Consumo Local,4:cundi_boy,15:restaurante
+CERVEZAS,MONT,20000211,10003889,Consumo Local,3:santanderes,15:restaurante
+CERVEZAS,MONT,20000211,10003783,Consumo Local,4:cundi_boy,15:restaurante
+CERVEZAS,MONT,20000211,10003887,Consumo Local,3:santanderes,15:restaurante
+CERVEZAS,MONT,20000211,10003886,Consumo Local,3:santanderes,15:restaurante
+CERVEZAS,MONT,20000211,10003677,Consumo Local,1:atlantico,15:restaurante
+CERVEZAS,MONT,20000211,10003490,Consumo Local,1:atlantico,15:restaurante
+CERVEZAS,MONT,20000211,10003686,Consumo Local,4:cundi_boy,15:restaurante
+CERVEZAS,MONT,20000211,10003803,Consumo Local,8:pacifico,15:restaurante
+CERVEZAS,MONT,20000211,10003858,Consumo Local,2:antioquia_choco,15:restaurante
+CERVEZAS,MONT,20000211,10003860,Consumo Local,2:antioquia_choco,15:restaurante
+CERVEZAS,MONT,20000211,10003690,Consumo Local,5:eje_cafetero,15:restaurante
+CERVEZAS,MONT,20000211,10003698,Consumo Local,8:pacifico,15:restaurante
+CERVEZAS,MONT,20000211,10003519,Consumo Local,2:antioquia_choco,15:restaurante
+CERVEZAS,MONT,20000211,10003784,Consumo Local,4:cundi_boy,15:restaurante
+CERVEZAS,MONT,20000211,10003696,Consumo Local,7:llanos,15:restaurante
+CERVEZAS,MONT,20000211,10003701,Consumo Local,8:pacifico,15:restaurante
+CERVEZAS,MONT,20000211,10003488,Consumo Local,1:atlantico,15:restaurante
+CERVEZAS,MONT,20000211,10003791,Consumo Local,5:eje_cafetero,15:restaurante
+CERVEZAS,MONT,20000211,10003695,Consumo Local,7:llanos,15:restaurante
+CERVEZAS,MONT,20000211,10003603,Consumo Local,2:antioquia_choco,15:restaurante
+CERVEZAS,MONT,20000211,10003859,Consumo Local,2:antioquia_choco,15:restaurante
+CERVEZAS,MONT,20000211,10003444,Autoservicios,1:atlantico,3:minimercado
+CERVEZAS,MONT,20000211,10003618,Autoservicios,6:centro,3:minimercado
+CERVEZAS,MONT,20000211,10003441,Autoservicios,1:atlantico,3:minimercado
+CERVEZAS,MONT,20000211,10003445,Autoservicios,1:atlantico,3:minimercado
+CERVEZAS,MONT,20000211,10003447,Autoservicios,1:atlantico,3:minimercado
+CERVEZAS,MONT,20000211,10003578,Autoservicios,4:cundi_boy,3:minimercado
+CERVEZAS,MONT,20000211,10003470,Autoservicios,2:antioquia_choco,3:minimercado
+CERVEZAS,MONT,20000211,10003649,Autoservicios,8:pacifico,3:minimercado
+CERVEZAS,MONT,20000211,10003605,Autoservicios,5:eje_cafetero,3:minimercado
+CERVEZAS,MONT,20000211,10003446,Autoservicios,1:atlantico,3:minimercado
+CERVEZAS,MONT,20000211,10003471,Autoservicios,2:antioquia_choco,3:minimercado
+CERVEZAS,MONT,20000211,10003604,Autoservicios,5:eje_cafetero,3:minimercado
+CERVEZAS,MONT,20000211,10003606,Autoservicios,5:eje_cafetero,3:minimercado
+CERVEZAS,MONT,20000211,10003629,Autoservicios,7:llanos,3:minimercado
+CERVEZAS,MONT,20000211,10003631,Autoservicios,7:llanos,3:minimercado
+CERVEZAS,MONT,20000211,10003574,Autoservicios,4:cundi_boy,3:minimercado
+CERVEZAS,MONT,20000211,10003553,Autoservicios,3:santanderes,3:minimercado
+CERVEZAS,MONT,20000211,10003647,Autoservicios,8:pacifico,3:minimercado
+CERVEZAS,MONT,20000211,10003522,Autoservicios,2:antioquia_choco,3:minimercado
+CERVEZAS,MONT,20000211,10003525,Autoservicios,2:antioquia_choco,3:minimercado
+CERVEZAS,MONT,20000211,10003650,Autoservicios,8:pacifico,3:minimercado
+CERVEZAS,MONT,20000211,10003524,Autoservicios,2:antioquia_choco,3:minimercado
+CERVEZAS,MONT,20000211,10003669,Tradicionales,8:pacifico,6:licoreria
+CERVEZAS,MONT,20000211,10003443,Autoservicios,1:atlantico,3:minimercado
+CERVEZAS,MONT,20000211,10003577,Autoservicios,4:cundi_boy,3:minimercado
+CERVEZAS,MONT,20000211,10003630,Autoservicios,7:llanos,3:minimercado
+CERVEZAS,MONT,20000211,10003575,Autoservicios,4:cundi_boy,3:minimercado
+CERVEZAS,MONT,20000211,10003551,Autoservicios,3:santanderes,3:minimercado
+CERVEZAS,MONT,20000211,10003579,Autoservicios,4:cundi_boy,3:minimercado
+CERVEZAS,MONT,20000211,10003576,Autoservicios,4:cundi_boy,3:minimercado
+CERVEZAS,MONT,20000211,10003554,Autoservicios,3:santanderes,3:minimercado
+CERVEZAS,MONT,20000211,10003648,Autoservicios,8:pacifico,3:minimercado
+CERVEZAS,MONT,20000211,10003521,Autoservicios,2:antioquia_choco,3:minimercado
+CERVEZAS,MONT,20000211,10003645,Autoservicios,8:pacifico,1:supermercados
+CERVEZAS,MONT,20000211,10003725,Consumo Local,8:pacifico,11:bar
+CERVEZAS,MONT,20000211,10003552,Autoservicios,3:santanderes,3:minimercado
+CERVEZAS,MONT,20000211,10003619,Autoservicios,6:centro,3:minimercado
+CERVEZAS,MONT,20000211,10003523,Autoservicios,2:antioquia_choco,3:minimercado
+CERVEZAS,MONT,20000211,10003573,Autoservicios,4:cundi_boy,3:minimercado
+CERVEZAS,MONT,20000211,10003442,Autoservicios,1:atlantico,3:minimercado
+CERVEZAS,MONT,20000211,10003729,Consumo Local,7:llanos,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003903,Consumo Local,5:eje_cafetero,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003912,Consumo Local,2:antioquia_choco,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003914,Consumo Local,2:antioquia_choco,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003812,Consumo Local,1:atlantico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003727,Consumo Local,4:cundi_boy,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003831,Consumo Local,2:antioquia_choco,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003830,Consumo Local,8:pacifico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003901,Consumo Local,3:santanderes,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003891,Consumo Local,6:centro,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003841,Consumo Local,7:llanos,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003900,Consumo Local,1:atlantico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003730,Consumo Local,7:llanos,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003825,Consumo Local,4:cundi_boy,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003846,Consumo Local,2:antioquia_choco,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003897,Consumo Local,1:atlantico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003820,Consumo Local,4:cundi_boy,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003840,Consumo Local,4:cundi_boy,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003806,Consumo Local,8:pacifico,15:restaurante
+CERVEZAS,MONT,20000211,10005726,Consumo Local,3:santanderes,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003913,Consumo Local,2:antioquia_choco,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10005735,Consumo Local,8:pacifico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003890,Consumo Local,1:atlantico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003731,Consumo Local,8:pacifico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003838,Consumo Local,5:eje_cafetero,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003834,Consumo Local,2:antioquia_choco,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003844,Consumo Local,8:pacifico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003911,Consumo Local,2:antioquia_choco,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003854,Consumo Local,2:antioquia_choco,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003895,Consumo Local,8:pacifico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003902,Consumo Local,3:santanderes,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003652,Autoservicios,8:pacifico,3:minimercado
+CERVEZAS,MONT,20000211,10003904,Consumo Local,4:cundi_boy,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003818,Consumo Local,5:eje_cafetero,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003852,Consumo Local,2:antioquia_choco,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003907,Consumo Local,4:cundi_boy,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003906,Consumo Local,4:cundi_boy,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10005727,Consumo Local,5:eje_cafetero,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003908,Consumo Local,8:pacifico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003899,Consumo Local,1:atlantico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003894,Consumo Local,7:llanos,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003837,Consumo Local,3:santanderes,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003915,Consumo Local,2:antioquia_choco,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003898,Consumo Local,1:atlantico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003839,Consumo Local,6:centro,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003602,Consumo Local,5:eje_cafetero,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003808,Consumo Local,4:cundi_boy,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003896,Consumo Local,1:atlantico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003835,Consumo Local,2:antioquia_choco,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003853,Consumo Local,2:antioquia_choco,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003910,Consumo Local,8:pacifico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003487,Consumo Local,1:atlantico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003905,Consumo Local,4:cundi_boy,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003829,Consumo Local,8:pacifico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003816,Consumo Local,3:santanderes,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003776,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003836,Consumo Local,1:atlantico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003916,Consumo Local,3:santanderes,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003813,Consumo Local,1:atlantico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10005734,Consumo Local,1:atlantico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003892,Consumo Local,4:cundi_boy,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003824,Consumo Local,4:cundi_boy,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003893,Consumo Local,5:eje_cafetero,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003662,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003823,Consumo Local,4:cundi_boy,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003809,Consumo Local,7:llanos,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003810,Consumo Local,8:pacifico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003655,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003531,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003532,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003740,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003734,Tradicionales,3:santanderes,4:tradicional
+CERVEZAS,MONT,20000211,10003754,Tradicionales,5:eje_cafetero,4:tradicional
+CERVEZAS,MONT,20000211,10003757,Tradicionales,5:eje_cafetero,4:tradicional
+CERVEZAS,MONT,20000211,10003866,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003867,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003872,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003608,Tradicionales,5:eje_cafetero,4:tradicional
+CERVEZAS,MONT,20000211,10003507,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003679,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003533,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003535,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003621,Tradicionales,6:centro,4:tradicional
+CERVEZAS,MONT,20000211,10003658,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003778,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003580,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003741,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003634,Tradicionales,7:llanos,4:tradicional
+CERVEZAS,MONT,20000211,10003581,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003609,Tradicionales,5:eje_cafetero,4:tradicional
+CERVEZAS,MONT,20000211,10003526,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003559,Tradicionales,3:santanderes,4:tradicional
+CERVEZAS,MONT,20000211,10003452,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003451,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003661,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003670,Tradicionales,8:pacifico,6:licoreria
+CERVEZAS,MONT,20000211,10003590,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003536,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003558,Tradicionales,3:santanderes,4:tradicional
+CERVEZAS,MONT,20000211,10003527,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003453,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003772,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003657,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003755,Tradicionales,5:eje_cafetero,4:tradicional
+CERVEZAS,MONT,20000211,10003874,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003529,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003556,Tradicionales,3:santanderes,4:tradicional
+CERVEZAS,MONT,20000211,10092645,Consumo Local,8:pacifico,"15:restaurante,32:panaderia/cafeteria"
+CERVEZAS,MONT,20000211,10003735,Tradicionales,3:santanderes,4:tradicional
+CERVEZAS,MONT,20000211,10003742,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003759,Tradicionales,5:eje_cafetero,4:tradicional
+CERVEZAS,MONT,20000211,10003681,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003583,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003654,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003555,Tradicionales,3:santanderes,4:tradicional
+CERVEZAS,MONT,20000211,10003751,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003773,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003646,Autoservicios,8:pacifico,1:supermercados
+CERVEZAS,MONT,20000211,10003726,Consumo Local,8:pacifico,11:bar
+CERVEZAS,MONT,20000211,10003766,Tradicionales,7:llanos,4:tradicional
+CERVEZAS,MONT,20000211,10003611,Tradicionales,5:eje_cafetero,4:tradicional
+CERVEZAS,MONT,20000211,10003591,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003500,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003534,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003807,Consumo Local,8:pacifico,15:restaurante
+CERVEZAS,MONT,20000211,10003736,Tradicionales,3:santanderes,4:tradicional
+CERVEZAS,MONT,20000211,10003743,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003582,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003656,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003750,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003588,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003739,Tradicionales,3:santanderes,4:tradicional
+CERVEZAS,MONT,20000211,10003745,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003584,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003746,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003756,Tradicionales,5:eje_cafetero,4:tradicional
+CERVEZAS,MONT,20000211,10003765,Tradicionales,7:llanos,4:tradicional
+CERVEZAS,MONT,20000211,10003873,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003877,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003505,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003585,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003498,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003557,Tradicionales,3:santanderes,4:tradicional
+CERVEZAS,MONT,20000211,10003589,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003875,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003504,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003508,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003560,Tradicionales,3:santanderes,4:tradicional
+CERVEZAS,MONT,20000211,10003450,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003620,Tradicionales,6:centro,4:tradicional
+CERVEZAS,MONT,20000211,10003704,Consumo Local,8:pacifico,15:restaurante
+CERVEZAS,MONT,20000211,10003732,Tradicionales,3:santanderes,4:tradicional
+CERVEZAS,MONT,20000211,10003587,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003771,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003653,Autoservicios,8:pacifico,3:minimercado
+CERVEZAS,MONT,20000211,10003869,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003876,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003503,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003528,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003449,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003622,Tradicionales,6:centro,4:tradicional
+CERVEZAS,MONT,20000211,10003767,Tradicionales,7:llanos,4:tradicional
+CERVEZAS,MONT,20000211,10003633,Tradicionales,7:llanos,4:tradicional
+CERVEZAS,MONT,20000211,10003635,Tradicionales,7:llanos,4:tradicional
+CERVEZAS,MONT,20000211,10003870,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003871,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003495,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003762,Tradicionales,6:centro,4:tradicional
+CERVEZAS,MONT,20000211,10003909,Consumo Local,8:pacifico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003738,Tradicionales,3:santanderes,4:tradicional
+CERVEZAS,MONT,20000211,10003753,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003768,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003607,Tradicionales,5:eje_cafetero,4:tradicional
+CERVEZAS,MONT,20000211,10003747,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003748,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003530,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003501,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003496,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003632,Tradicionales,7:llanos,4:tradicional
+CERVEZAS,MONT,20000211,10003586,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003682,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003610,Tradicionales,5:eje_cafetero,4:tradicional
+CERVEZAS,MONT,20000211,10003499,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003448,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003733,Tradicionales,3:santanderes,4:tradicional
+CERVEZAS,MONT,20000211,10003760,Tradicionales,6:centro,4:tradicional
+CERVEZAS,MONT,20000211,10003761,Tradicionales,6:centro,4:tradicional
+CERVEZAS,MONT,20000211,10005728,Consumo Local,8:pacifico,32:panaderia/cafeteria
+CERVEZAS,MONT,20000211,10003770,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003537,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003561,Tradicionales,3:santanderes,4:tradicional
+CERVEZAS,MONT,20000211,10003680,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003663,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003764,Tradicionales,7:llanos,4:tradicional
+CERVEZAS,MONT,20000211,10003868,Tradicionales,2:antioquia_choco,4:tradicional
+CERVEZAS,MONT,20000211,10003497,Tradicionales,1:atlantico,4:tradicional
+CERVEZAS,MONT,20000211,10003749,Tradicionales,4:cundi_boy,4:tradicional
+CERVEZAS,MONT,20000211,10003623,Tradicionales,6:centro,6:licoreria
+CERVEZAS,MONT,20000211,10003541,Tradicionales,2:antioquia_choco,6:licoreria
+CERVEZAS,MONT,20000211,10003597,Tradicionales,4:cundi_boy,6:licoreria
+CERVEZAS,MONT,20000211,10003637,Tradicionales,7:llanos,6:licoreria
+CERVEZAS,MONT,20000211,10003592,Tradicionales,4:cundi_boy,6:licoreria
+CERVEZAS,MONT,20000211,10003538,Tradicionales,2:antioquia_choco,6:licoreria
+CERVEZAS,MONT,20000211,10003542,Tradicionales,2:antioquia_choco,6:licoreria
+CERVEZAS,MONT,20000211,10003564,Tradicionales,3:santanderes,6:licoreria
+CERVEZAS,MONT,20000211,10003457,Tradicionales,1:atlantico,6:licoreria
+CERVEZAS,MONT,20000211,10003459,Tradicionales,1:atlantico,6:licoreria
+CERVEZAS,MONT,20000211,10003539,Tradicionales,2:antioquia_choco,6:licoreria
+CERVEZAS,MONT,20000211,10003636,Tradicionales,7:llanos,6:licoreria
+CERVEZAS,MONT,20000211,10003595,Tradicionales,4:cundi_boy,6:licoreria
+CERVEZAS,MONT,20000211,10003540,Tradicionales,2:antioquia_choco,6:licoreria
+CERVEZAS,MONT,20000211,10003613,Tradicionales,5:eje_cafetero,6:licoreria
+CERVEZAS,MONT,20000211,10003563,Tradicionales,3:santanderes,6:licoreria
+CERVEZAS,MONT,20000211,10003780,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003596,Tradicionales,4:cundi_boy,6:licoreria
+CERVEZAS,MONT,20000211,10003598,Tradicionales,4:cundi_boy,6:licoreria
+CERVEZAS,MONT,20000211,10003666,Tradicionales,8:pacifico,6:licoreria
+CERVEZAS,MONT,20000211,10003562,Tradicionales,3:santanderes,6:licoreria
+CERVEZAS,MONT,20000211,10003456,Tradicionales,1:atlantico,6:licoreria
+CERVEZAS,MONT,20000211,10003624,Tradicionales,6:centro,6:licoreria
+CERVEZAS,MONT,20000211,10003455,Tradicionales,1:atlantico,6:licoreria
+CERVEZAS,MONT,20000211,10003664,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003458,Tradicionales,1:atlantico,6:licoreria
+CERVEZAS,MONT,20000211,10003612,Tradicionales,5:eje_cafetero,6:licoreria
+CERVEZAS,MONT,20000211,10003638,Tradicionales,7:llanos,6:licoreria
+CERVEZAS,MONT,20000211,10003667,Tradicionales,8:pacifico,6:licoreria
+CERVEZAS,MONT,20000211,10003454,Tradicionales,1:atlantico,6:licoreria
+CERVEZAS,MONT,20000211,10003593,Tradicionales,4:cundi_boy,6:licoreria
+CERVEZAS,MONT,20000211,10003614,Tradicionales,5:eje_cafetero,6:licoreria
+CERVEZAS,MONT,20000211,10003472,Tradicionales,2:antioquia_choco,6:licoreria
+CERVEZAS,MONT,20000211,10003473,Tradicionales,2:antioquia_choco,6:licoreria
+CERVEZAS,MONT,20000211,10003665,Tradicionales,8:pacifico,6:licoreria
+CERVEZAS,MONT,20000211,10003565,Tradicionales,3:santanderes,6:licoreria
+CERVEZAS,MONT,20000211,10003594,Tradicionales,4:cundi_boy,6:licoreria
+CERVEZAS,MONT,20000211,10003460,Tradicionales,1:atlantico,6:licoreria
+CERVEZAS,MONT,20000211,10003779,Tradicionales,8:pacifico,4:tradicional
+CERVEZAS,MONT,20000211,10003668,Tradicionales,8:pacifico,6:licoreria
+CERVEZAS,MONT,20000211,10003543,Tradicionales,8:pacifico,9:kiosko
+CERVEZAS,MONT,20000211,10003462,Tradicionales,2:antioquia_choco,9:kiosko
+CERVEZAS,MONT,20000211,10003544,Tradicionales,8:pacifico,9:kiosko
+CERVEZAS,MONT,20000211,10003545,Tradicionales,3:santanderes,9:kiosko
+CERVEZAS,MONT,20000211,10003464,Tradicionales,6:centro,9:kiosko
+CERVEZAS,MONT,20000211,10003466,Tradicionales,4:cundi_boy,9:kiosko
+CERVEZAS,MONT,20000211,10003465,Tradicionales,4:cundi_boy,9:kiosko
+CERVEZAS,MONT,20000211,10003474,Tradicionales,7:llanos,9:kiosko
+CERVEZAS,MONT,20000211,10003461,Tradicionales,2:antioquia_choco,9:kiosko
+CERVEZAS,MONT,20000211,10003463,Tradicionales,1:atlantico,9:kiosko
+CERVEZAS,MONT,20000211,10003475,Tradicionales,7:llanos,9:kiosko
+CERVEZAS,MONT,20000211,10003467,Tradicionales,5:eje_cafetero,9:kiosko
+CERVEZAS,MONT,20000211,10003671,Tradicionales,8:pacifico,6:licoreria
+CERVEZAS,MONT,20000211,10092646,Consumo Local,2:antioquia_choco,"15:restaurante,32:panaderia/cafeteria"
+CERVEZAS,MONT,20000211,10092647,Consumo Local,6:centro,"15:restaurante,32:panaderia/cafeteria"
+CERVEZAS,MONT,20000211,10092648,Consumo Local,1:atlantico,"15:restaurante,32:panaderia/cafeteria"
+CERVEZAS,MONT,20000211,10092649,Consumo Local,2:antioquia_choco,"15:restaurante,32:panaderia/cafeteria"
+CERVEZAS,MONT,20000211,10092650,Consumo Local,3:santanderes,"15:restaurante,32:panaderia/cafeteria"
+CERVEZAS,MONT,20000211,10092651,Consumo Local,6:centro,"15:restaurante,32:panaderia/cafeteria"
+CERVEZAS,MONT,20000211,10092652,Consumo Local,7:llanos,"15:restaurante,32:panaderia/cafeteria"
+CERVEZAS,MONT,20000211,10092653,Consumo Local,4:cundi_boy,"15:restaurante,32:panaderia/cafeteria"
+CERVEZAS,MONT,20000211,10092654,Consumo Local,4:cundi_boy,"15:restaurante,32:panaderia/cafeteria"
+CERVEZAS,MONT,20000211,10092655,Consumo Local,1:atlantico,"15:restaurante,32:panaderia/cafeteria"
+CERVEZAS,MONT,20000211,10092656,Consumo Local,1:atlantico,"15:restaurante,32:panaderia/cafeteria"
+CERVEZAS,MONT,20000211,10092657,Consumo Local,3:santanderes,"15:restaurante,32:panaderia/cafeteria"
+CERVEZAS,SCAN,0,10002284,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002287,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002288,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002289,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10003023,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10005719,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10005721,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10005722,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10043731,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10051824,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10052914,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10052916,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10052917,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002244,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002247,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002248,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002249,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002250,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002251,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002256,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002257,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002260,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002261,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002262,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002263,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002264,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002265,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002266,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002267,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002268,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002270,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002271,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002273,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002274,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002275,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002276,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10002277,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10052919,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10053780,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10059534,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10088905,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10090664,SCAN,SCAN,SCAN
+CERVEZAS,SCAN,0,10090666,SCAN,SCAN,SCAN

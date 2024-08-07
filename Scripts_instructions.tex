@@ -1,0 +1,42 @@
+You can find the video summarizing this instructions in the following link:
+https://nielsenenterprise.sharepoint.com/:v:/s/LatAmXZTemplate/EcJQrKt0vjhCoPEwI-wMWUMBkiSTPZ0UCRzoqcFH3QOlBg?e=bEHfZk
+
+1. Make sure that your working directory has the following architecture:
+    |-inputs
+        |-Cells_Chars.csv
+        |-Cells_LastPeriod.csv
+        |-MBD_NumDist.csv
+        |-MBD_TypeTarget.csv
+        |-VUE_Impacts.csv
+        |-VUE_SampleNSPC.csv
+    |-outputs
+    |-scripts
+        |-XZTGenerator.py
+        |-MDDCatCellImpacts.py 
+        |-LatAm-TemplateGenerator.ipynb
+
+    Note: Remeber that Cells_Chars.csv, MBD_TypeTarget.csv, (MBD_NumDist.csv 
+            if multi-channel project) are user-defined files; and 
+            Cells_LastPeriod.csv, VUE_SampleNSPC.csv, VUE_Impacts.csv (and 
+            MBD_NumDist.csv if single-channel project) are VUE data.
+
+
+2. Open LatAm-TemplateGenerator.ipynb in your preferred IDE or Jupyter Notebook.
+    Make sure your using your current user directory, and the working directory
+    is correctly set to the path where the files are located.
+
+
+3. Make sure the params are set to your preferences.
+    - nspc_param :       a parameter that the script will use to flag the cells that
+                            exceeds by percentage this value.
+    - xf_param:          a parameter that the script will use to flag the cells that
+                            exceeds by percentage this value.
+    - cell_cat_param:    a parameter that, in conjuction with cell_weight_param, 
+                            the script will use to a cell importance if they exceed 
+                            by percentage this value.
+    - cell_weight_param: a parameter that, in conjuction with cell_cat_param, 
+                            the script will use to a cell importance if they exceed 
+                            by percentage this value.
+
+
+4. Run the Jupyter cell.
