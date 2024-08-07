@@ -460,6 +460,7 @@ class XZTG:
             self.average_x_vs_z(row['VUE_XPanel'], row['VUE_ZPanel']), axis=1)
         cells_df['Average ADJ Universe'] = cells_df.apply(lambda row:
             self.average_x_vs_z(row['ADJ_XUniverse'], row['VUE_ZUniverse']), axis=1)
+        return cells_df
 
     def set_cell_flags(self, 
                        distance_param: float,
