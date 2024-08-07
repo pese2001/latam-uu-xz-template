@@ -405,7 +405,6 @@ class XZTG:
         cells_df['XZ Proposed Distance'] = cells_df['VUE_XZDistance']
         cells_df['ADJ_XFactor'] = cells_df['VUE_XFactor']
         cells_df['ADJ_XUniverse'] = cells_df['VUE_XUniverse']
-        cells_df['ADJ_XPanel'] = cells_df['VUE_XPanel']
         cells_df['VAR_XUniverse (BAU vs VUE)'] = self.relative_change(
             cells_df['BAU_XUniverse'], cells_df['VUE_XUniverse'])
         cells_df['VAR_XUniverse (BAU vs ADJ)'] = self.relative_change(
