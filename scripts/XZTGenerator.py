@@ -441,6 +441,25 @@ class XZTG:
             cells_df['VUE_NSPC Area-Channel Cell Weight'] 
             - cells_df['ADJ_NSPC Area-Channel Cell Weight'])
         return cells_df
+    
+    def average_x_vs_z(self, 
+                       x_column,
+                       z_column):
+        avrg = np.round((x_column / z_column), 3)
+        return avrg
+    
+    def set_bau_vue_averages(self):
+        cells_df = self.set_cell_area_channel_weight_diff()
+        cells_df['Average BAU Universe'] = cells_df.apply(lambda row:
+            self.average_x_vs_z(row['BAU_XUniverse'], row['BAU_ZUniverse']), axis=1)
+        cells_df['Average BAU Panel'] = cells_df.apply(lambda row:
+            self.average_x_vs_z(row['BAU_XPanel'], row['BAU_ZPanel']), axis=1)
+        cells_df['Average VUE Universe'] = cells_df.apply(lambda row:
+            self.average_x_vs_z(row['VUE_XUniverse'], row['VUE_ZUniverse']), axis=1)
+        cells_df['Average VUE Panel'] = cells_df.apply(lambda row:
+            self.average_x_vs_z(row['VUE_XPanel'], row['VUE_ZPanel']), axis=1)
+        cells_df['Average ADJ Universe'] = cells_df.apply(lambda row:
+            self.average_x_vs_z(row['ADJ_XUniverse'], row['VUE_ZUniverse']), axis=1)
 
     def set_cell_flags(self, 
                        distance_param: float,
@@ -475,7 +494,7 @@ class XZTG:
                 0 if the signs of row['VAR_XUniverse (BAU vs ADJ)'] and row['VAR_ZUniverse'] are the same, 1 if they are different.
         6. Return the updated DataFrame with all new test result columns.
         """
-        cells_df = self.set_cell_area_channel_weight_diff()
+        cells_df = self.set_bau_vue_averages()
         cells_df['DTest'] = cells_df.apply(lambda row: self.dtest(
             row['VUE_XZDistance'], distance_param), axis=1)
         cells_df['NSPCTest'] = cells_df.apply(lambda row: self.var_test(
