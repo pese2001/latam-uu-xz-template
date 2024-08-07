@@ -428,10 +428,18 @@ class XZTG:
     
     def set_cell_area_channel_weight_diff(self):
         cells_df = self.set_cell_area_channel_weights()
-        cells_df['N Area-Channel Cell Weight diff (BAU vs VUE)'] = 0
-        cells_df['NSPC Area-Channel Cell Weight diff (BAU vs VUE)'] = 0
-        cells_df['NSPC Area-Channel Cell Weight diff (BAU vs ADJ)'] = 0
-        cells_df['NSPC Area-Channel Cell Weight diff (VUE vs ADJ)'] = 0
+        cells_df['N Area-Channel Cell Weight diff (BAU vs VUE)'] = (
+            cells_df['BAU_N Area-Channel Cell Weight'] 
+            - cells_df['VUE_N Area-Channel Cell Weight'])
+        cells_df['NSPC Area-Channel Cell Weight diff (BAU vs VUE)'] = (
+            cells_df['BAU_NSPC Area-Channel Cell Weight'] 
+            - cells_df['VUE_NSPC Area-Channel Cell Weight'])
+        cells_df['NSPC Area-Channel Cell Weight diff (BAU vs ADJ)'] = (
+            cells_df['BAU_NSPC Area-Channel Cell Weight'] 
+            - cells_df['ADJ_NSPC Area-Channel Cell Weight'])
+        cells_df['NSPC Area-Channel Cell Weight diff (VUE vs ADJ)'] = (
+            cells_df['VUE_NSPC Area-Channel Cell Weight'] 
+            - cells_df['ADJ_NSPC Area-Channel Cell Weight'])
         return cells_df
 
     def set_cell_flags(self, 
@@ -467,7 +475,7 @@ class XZTG:
                 0 if the signs of row['VAR_XUniverse (BAU vs ADJ)'] and row['VAR_ZUniverse'] are the same, 1 if they are different.
         6. Return the updated DataFrame with all new test result columns.
         """
-        cells_df = self.set_cell_area_channel_weights()
+        cells_df = self.set_cell_area_channel_weight_diff()
         cells_df['DTest'] = cells_df.apply(lambda row: self.dtest(
             row['VUE_XZDistance'], distance_param), axis=1)
         cells_df['NSPCTest'] = cells_df.apply(lambda row: self.var_test(
