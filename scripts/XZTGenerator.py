@@ -102,6 +102,19 @@ class XZTG:
     
     def get_handler_value(self,
                           cell_name):
+        """
+        Determine the handler value based on the cell name.
+
+        Args:
+            cell_name (str): The name of the cell.
+
+        Returns:
+            int: 0 if the cell name contains specific patterns, 1 otherwise.
+
+        Summary:
+            Checks if the cell name contains any of the patterns '_NM', '_NO_MANEJANTE', or 'NOMANEJANTE'.
+            Returns 0 if a pattern is found, 1 otherwise.
+        """
         patterns = ['_NM', '_NO_MANEJANTE', 'NOMANEJANTE']
         combined_pattern = '|'.join(map(re.escape, patterns))
         if re.search(combined_pattern, cell_name):
@@ -259,6 +272,7 @@ class XZTG:
 
         Args:
             c1 (float): The value to test.
+            distance_param (float): Parameter for Distance test.
 
         Returns:
             int: 0 if the absolute value of c1 is less than or equal to 3, 1 otherwise.
@@ -400,6 +414,21 @@ class XZTG:
                             row,
                             df,
                             target_column_name):
+        """
+        Calculate the area-channel weight for a given row.
+
+        Args:
+            row (pd.Series): A row from the DataFrame.
+            df (pd.DataFrame): The entire DataFrame.
+            target_column_name (str): The name of the target column for calculations.
+
+        Returns:
+            float: The calculated area-channel weight.
+
+        Summary:
+            Calculates the weight based on the Handler value and the ratio of the target column
+            value to the sum of target column values for matching rows.
+        """
         if row['Handler'] == 1:
             mask = (df['Handler'] == 1) & \
                 (df['StoreTypeChannel'] == row['StoreTypeChannel']) & \
@@ -413,6 +442,16 @@ class XZTG:
             return 0
 
     def set_cell_area_channel_weights(self):
+        """
+        Set area-channel weights for different scenarios.
+
+        Returns:
+            pd.DataFrame: DataFrame with added area-channel weight columns.
+
+        Summary:
+            Calculates and adds columns for BAU, VUE, and ADJ area-channel weights
+            for both N and NSPC scenarios.
+        """
         cells_df = self.set_dummy_calc()
         cells_df['BAU_N Area-Channel Cell Weight'] = cells_df.apply(lambda row: 
             self.area_channel_weight(row, cells_df, 'BAU_ZUniverse'), axis=1)
@@ -427,6 +466,16 @@ class XZTG:
         return cells_df
     
     def set_cell_area_channel_weight_diff(self):
+        """
+        Calculate differences between area-channel weights.
+
+        Returns:
+            pd.DataFrame: DataFrame with added weight difference columns.
+
+        Summary:
+            Computes and adds columns for the differences between BAU, VUE, and ADJ
+            area-channel weights for both N and NSPC scenarios.
+        """
         cells_df = self.set_cell_area_channel_weights()
         cells_df['N Area-Channel Cell Weight diff (BAU vs VUE)'] = (
             cells_df['BAU_N Area-Channel Cell Weight'] 
@@ -445,10 +494,33 @@ class XZTG:
     def average_x_vs_z(self, 
                        x_column,
                        z_column):
+        """
+        Calculate the average ratio between X and Z columns.
+
+        Args:
+            x_column (pd.Series): The X column values.
+            z_column (pd.Series): The Z column values.
+
+        Returns:
+            float: The rounded average ratio of X to Z.
+
+        Summary:
+            Computes the ratio of X to Z columns and rounds the result to 3 decimal places.
+        """
         avrg = np.round((x_column / z_column), 3)
         return avrg
     
     def set_bau_vue_averages(self):
+        """
+        Set average values for BAU, VUE, and ADJ scenarios.
+
+        Returns:
+            pd.DataFrame: DataFrame with added average columns.
+
+        Summary:
+            Calculates and adds columns for average Universe and Panel values
+            for BAU, VUE, and ADJ scenarios.
+        """
         cells_df = self.set_cell_area_channel_weight_diff()
         cells_df['Average BAU Universe'] = cells_df.apply(lambda row:
             self.average_x_vs_z(row['BAU_XUniverse'], row['BAU_ZUniverse']), axis=1)
@@ -470,6 +542,7 @@ class XZTG:
         Set cell flags based on various tests.
 
         Args:
+            distance_param (float): Parameter for Distance test.
             nspc_param (float): Parameter for NSPC test.
             xf_param (float): Parameter for XF test.
 
@@ -515,6 +588,7 @@ class XZTG:
         Generate cell diagnostics and save results to a CSV file.
 
         Args:
+            distance_param (float): Parameter for Distance test.
             nspc_param (float): Parameter for NSPC test.
             xf_param (float): Parameter for XF test.
 

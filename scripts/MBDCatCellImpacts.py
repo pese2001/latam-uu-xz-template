@@ -72,6 +72,7 @@ class MBDCCImpcts:
 
         Args:
             working_dir (str): The working directory path.
+            distance_param (float): Parameter for Distance test.
             nspc_param (float): Parameter for NSPC calculations.
             xf_param (float): Parameter for XF calculations.
             cell_cat_param (float): Parameter for cell category calculations.
