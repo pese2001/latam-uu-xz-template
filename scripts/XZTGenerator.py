@@ -237,8 +237,9 @@ class XZTG:
         else:
             return True
 
-    def dtest(self, 
-              c1):
+    def dtest(self,
+              c1,
+              distance):
         """
         Perform a distance test on a given value.
 
@@ -251,7 +252,7 @@ class XZTG:
         Summary:
             Checks if the absolute value of c1 is within the range [-3, 3].
         """
-        if abs(c1) <= 3:
+        if abs(c1) <= distance:
             return 0
         else:
             return 1
@@ -387,6 +388,7 @@ class XZTG:
         return cells_df
 
     def set_cell_flags(self, 
+                       distance_param: float,
                        nspc_param: float, 
                        xf_param: float):
         """
@@ -420,7 +422,7 @@ class XZTG:
         """
         cells_df = self.set_dummy_calc()
         cells_df['DTest'] = cells_df.apply(lambda row: self.dtest(
-            row['VUE_XZDistance']), axis=1)
+            row['VUE_XZDistance'], distance_param), axis=1)
         cells_df['NSPCTest'] = cells_df.apply(lambda row: self.var_test(
             row['VAR_XUniverse (BAU vs ADJ)'], nspc_param), axis=1)
         cells_df['XFTest'] = cells_df.apply(lambda row: self.var_test(
@@ -431,6 +433,7 @@ class XZTG:
         return cells_df
 
     def get_cell_diagnostics(self, 
+                             distance_param: float,
                              nspc_param: float, 
                              xf_param: float):
         """
@@ -458,7 +461,7 @@ class XZTG:
             - CSV is saved without the index column.
         4. Return the final DataFrame with all diagnostics.
         """
-        cells_df = self.set_cell_flags(nspc_param, xf_param)
+        cells_df = self.set_cell_flags(distance_param, nspc_param, xf_param)
         cells_df['CellDiagnostic'] = cells_df.apply(lambda row: self.cell_cond(
             row['DTest'], row['NSPCTest'], row['XFTest'], row['SignTest']),
             axis=1)
