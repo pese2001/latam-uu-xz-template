@@ -395,6 +395,44 @@ class XZTG:
         cells_df['VAR_ZUniverse'] = self.relative_change(
             cells_df['BAU_ZUniverse'], cells_df['VUE_ZUniverse'])
         return cells_df
+    
+    def area_channel_weight(self,
+                            row,
+                            df,
+                            target_column_name):
+        if row['Handler'] == 1:
+            mask = (df['Handler'] == 1) & \
+                (df['StoreTypeChannel'] == row['StoreTypeChannel']) & \
+                (df['NielsenArea'] == row['NielsenArea'])
+            sum_target = df.loc[mask, target_column_name].sum()
+            if sum_target != 0:
+                return row[target_column_name] / sum_target
+            else:
+                return 0
+        else:
+            return 0
+
+    def set_cell_area_channel_weights(self):
+        cells_df = self.set_dummy_calc()
+        cells_df['BAU_N Area-Channel Cell Weight'] = cells_df.apply(lambda row: 
+            self.area_channel_weight(row, cells_df, 'BAU_ZUniverse'), axis=1)
+        cells_df['BAU_NSPC Area-Channel Cell Weight'] = cells_df.apply(lambda row: 
+            self.area_channel_weight(row, cells_df, 'BAU_XUniverse'), axis=1)
+        cells_df['VUE_N Area-Channel Cell Weight'] = cells_df.apply(lambda row: 
+            self.area_channel_weight(row, cells_df, 'VUE_ZUniverse'), axis=1)
+        cells_df['VUE_NSPC Area-Channel Cell Weight'] = cells_df.apply(lambda row: 
+            self.area_channel_weight(row, cells_df, 'VUE_XUniverse'), axis=1)
+        cells_df['ADJ_NSPC Area-Channel Cell Weight'] = cells_df.apply(lambda row: 
+            self.area_channel_weight(row, cells_df, 'ADJ_XUniverse'), axis=1)
+        return cells_df
+    
+    def set_cell_area_channel_weight_diff(self):
+        cells_df = self.set_cell_area_channel_weights()
+        cells_df['N Area-Channel Cell Weight diff (BAU vs VUE)'] = 0
+        cells_df['NSPC Area-Channel Cell Weight diff (BAU vs VUE)'] = 0
+        cells_df['NSPC Area-Channel Cell Weight diff (BAU vs ADJ)'] = 0
+        cells_df['NSPC Area-Channel Cell Weight diff (VUE vs ADJ)'] = 0
+        return cells_df
 
     def set_cell_flags(self, 
                        distance_param: float,
@@ -429,7 +467,7 @@ class XZTG:
                 0 if the signs of row['VAR_XUniverse (BAU vs ADJ)'] and row['VAR_ZUniverse'] are the same, 1 if they are different.
         6. Return the updated DataFrame with all new test result columns.
         """
-        cells_df = self.set_dummy_calc()
+        cells_df = self.set_cell_area_channel_weights()
         cells_df['DTest'] = cells_df.apply(lambda row: self.dtest(
             row['VUE_XZDistance'], distance_param), axis=1)
         cells_df['NSPCTest'] = cells_df.apply(lambda row: self.var_test(
