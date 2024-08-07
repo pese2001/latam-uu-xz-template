@@ -62,6 +62,7 @@ class MBDCCImpcts:
 
     def __init__(self, 
                  working_dir: str,
+                 distance_param: float,
                  nspc_param: float, 
                  xf_param: float,
                  cell_cat_param: float, 
@@ -96,12 +97,14 @@ class MBDCCImpcts:
         self.working_dir = working_dir
         self.input_dir = f'{self.working_dir}/inputs'
         self.output_dir = f'{self.working_dir}/outputs'
+        self.distance_param = distance_param
         self.nspc_param = nspc_param
         self.xf_param = xf_param
         self.cc_param = cell_cat_param
         self.cw_param = cell_weight_param
         self.xztg = XZTGen.XZTG(self.working_dir)
-        self.cell_adj_df = self.xztg.get_cell_diagnostics(self.nspc_param,
+        self.cell_adj_df = self.xztg.get_cell_diagnostics(self.distance_param,
+                                                          self.nspc_param,
                                                           self.xf_param)
         self.mbd_numdist = pd.read_csv(f'{self.input_dir}/MBD_NumDist.csv')
         self.mbd_typetarget = pd.read_csv(
