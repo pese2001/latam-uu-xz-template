@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import re
 
 """ 
 Overall summary:
@@ -98,6 +99,15 @@ class XZTG:
         cells_df['BAU_XZRatio'] = cells_df['BAU_XFactor'] / \
             cells_df['BAU_ZFactor']
         return cells_df
+    
+    def get_handler_value(self,
+                          cell_name):
+        patterns = ['_NM', '_NO_MANEJANTE', 'NOMANEJANTE']
+        combined_pattern = '|'.join(map(re.escape, patterns))
+        if re.search(combined_pattern, cell_name):
+            return 0
+        else:
+            return 1
 
     def set_vue_cells(self):
         """
@@ -162,8 +172,14 @@ class XZTG:
         """
         cells_df = self.set_bau_cells()
         vue_nspc = self.vue_samplenspc.copy()
-        ucols = ['IBD Name', 'IBD ID', 'Cell ID', 'X Universe',
-                 'Z Universe', 'X Panel', 'Z Panel', 'X Factor',
+        ucols = ['IBD Name',
+                 'IBD ID',
+                 'Cell ID',
+                 'X Universe',
+                 'Z Universe',
+                 'X Panel',
+                 'Z Panel',
+                 'X Factor',
                  'Z Factor']
         vue_nspc = vue_nspc[ucols]
         vue_nspc.rename(columns={x: x.replace(' ', '_')
@@ -186,15 +202,34 @@ class XZTG:
         cells['VUE_XZDistance'] = np.round((
             1 - (cells['VUE_ZFactor'] / cells['VUE_XFactor']))*np.sqrt(
                 cells['VUE_ZPanel']), 4) 
-        cells = cells[['INDEX', 'CHANNEL', 'SAMPLE', 'IBD_ID',
-                       'IBD_Name', 'Cell_ID', 'Cell_Name',
-                       'NielsenArea', 'StoreTypeChannel',
-                       'StoreType', 'BAU_XPanel', 'BAU_ZPanel',
-                       'BAU_XUniverse', 'BAU_ZUniverse',
-                       'BAU_XFactor', 'BAU_ZFactor', 'BAU_XZRatio',
-                       'VUE_XUniverse', 'VUE_ZUniverse',
-                       'VUE_XPanel', 'VUE_ZPanel', 'VUE_XFactor',
-                       'VUE_ZFactor', 'VUE_XZRatio', 'VUE_XZDistance']]
+        cells['Handler'] = cells.apply(lambda row: self.get_handler_value(
+            row['Cell_Name']), axis=1)
+        cells = cells[['INDEX', 
+                       'CHANNEL',
+                       'SAMPLE',
+                       'IBD_ID',
+                       'IBD_Name',
+                       'Cell_ID',
+                       'Cell_Name',
+                       'NielsenArea',
+                       'StoreTypeChannel',
+                       'StoreType',
+                       'Handler',
+                       'BAU_XPanel',
+                       'BAU_ZPanel',
+                       'BAU_XUniverse',
+                       'BAU_ZUniverse',
+                       'BAU_XFactor',
+                       'BAU_ZFactor',
+                       'BAU_XZRatio',
+                       'VUE_XUniverse',
+                       'VUE_ZUniverse',
+                       'VUE_XPanel',
+                       'VUE_ZPanel',
+                       'VUE_XFactor',
+                       'VUE_ZFactor',
+                       'VUE_XZRatio',
+                       'VUE_XZDistance']]
         return cells
 
     def relative_change(self, 
