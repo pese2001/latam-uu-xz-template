@@ -275,10 +275,10 @@ class XZTG:
             distance_param (float): Parameter for Distance test.
 
         Returns:
-            int: 0 if the absolute value of c1 is less than or equal to 3, 1 otherwise.
+            int: 0 if the absolute value of c1 is less than or equal to distance_param, 1 otherwise.
 
         Summary:
-            Checks if the absolute value of c1 is within the range [-3, 3].
+            Checks if the absolute value of c1 is within the range [-distance_param, distance_param].
         """
         if abs(c1) <= distance:
             return 0
