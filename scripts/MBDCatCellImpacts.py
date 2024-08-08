@@ -409,7 +409,12 @@ class MBDCCImpcts:
             - The CSV is saved without the index column.
         8. Return the final DataFrame with MBD and cell category diagnostics.
         """
-        ucols = ['MbdID', 'CategoryName', 'MBD Type', 'Target', 'OutOfTarget']
+        ucols = ['MbdID',
+                 'CategoryName',
+                 'MBD Type',
+                 'Target',
+                 'OutOfTarget',
+                 'Numerical Distribution']
         mbd_df = self.set_mbd_type()
         mbd_df = mbd_df[ucols]
         cell_df = self.set_cell_impacts()
@@ -427,6 +432,7 @@ class MBDCCImpcts:
                                'CategoryName',
                                'MBD Type',
                                'Target',
+                               'Numerical Distribution',
                                'Baseline_Sales',
                                'Baseline_CellImportance',
                                'BAU_XFactor',
