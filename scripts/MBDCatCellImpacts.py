@@ -409,7 +409,7 @@ class MBDCCImpcts:
             - The CSV is saved without the index column.
         8. Return the final DataFrame with MBD and cell category diagnostics.
         """
-        ucols = ['MbdID', 'CategoryName', 'OutOfTarget']
+        ucols = ['MbdID', 'CategoryName', 'MBD Type', 'Target', 'OutOfTarget']
         mbd_df = self.set_mbd_type()
         mbd_df = mbd_df[ucols]
         cell_df = self.set_cell_impacts()
@@ -420,6 +420,26 @@ class MBDCCImpcts:
                 row['CellCatTest'],
                 row['OutOfTarget']),
             axis=1)
+        cell_diag = cell_diag[['MbdID',
+                               'MbdName',
+                               'Cell_ID',
+                               'CategoryCode',
+                               'CategoryName',
+                               'MBD Type',
+                               'Target',
+                               'Baseline_Sales',
+                               'Baseline_CellImportance',
+                               'BAU_XFactor',
+                               'VUE_XFactor',
+                               'ADJ_XFactor',
+                               'UnprojectedSales',
+                               'VUE_ProjectedSales',
+                               'ADJ_ProjectedSales',
+                               'VUE_SalesImpact',
+                               'ADJ_SalesImpact',
+                               'CellCatTest',
+                               'OutOfTarget',
+                               'MBDCatDiag']]
         cell_diag.to_csv(f'{self.output_dir}/MBDCatCell_Impacts_v0.csv',
                          index=False)
         return cell_diag
