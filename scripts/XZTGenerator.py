@@ -115,7 +115,7 @@ class XZTG:
             Checks if the cell name contains any of the patterns '_NM', '_NO_MANEJANTE', or 'NOMANEJANTE'.
             Returns 0 if a pattern is found, 1 otherwise.
         """
-        patterns = ['_NM', '_NO_MANEJANTE', 'NOMANEJANTE']
+        patterns = ['_NM', '_NO_MANEJANTE', 'NOMANEJANTE', 'NO MANEJANTE']
         combined_pattern = '|'.join(map(re.escape, patterns))
         if re.search(combined_pattern, cell_name):
             return 0
