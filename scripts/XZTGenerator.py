@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import re
+import InputsPreCleaning as ipc
 
 """ 
 Overall summary:
@@ -57,6 +58,7 @@ class XZTG:
         Summary:
             Sets up directory paths and loads input CSV files into DataFrames.
         """
+        ipc.CleaningInputs(working_dir).get_clean_csvs()
         self.working_dir = working_dir
         self.input_dir = f'{self.working_dir}/inputs'
         self.output_dir = f'{self.working_dir}/outputs'
