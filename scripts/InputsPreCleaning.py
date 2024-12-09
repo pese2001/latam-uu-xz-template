@@ -246,6 +246,7 @@ class CleaningInputs:
         dfs_list = []
         for csv in csv_list:
             df = pd.read_csv(f'{self.inputs_path}/{csv}')
+            df = df.drop_duplicates()
             self._column_error_logs(df, self._df_columns(csv))
             dfs_list.append(df)
         return dfs_list
