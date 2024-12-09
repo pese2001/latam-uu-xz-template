@@ -175,6 +175,16 @@ class CleaningInputs:
     def _clean_encoding_text(self, text):
         return unidecode.unidecode(str(text))
     
+    def _process_mbd_code_row(self, code):
+        code_str = str(code)
+        return code_str.split('_')[-1]
+    
+    def _process_mbd_code_df(self, df: pd.DataFrame):
+        if 'MbdID' in df.columns:
+            df['MbdID'] = df['MbdID'].apply(lambda x: self._process_mbd_code_row(x))
+        return df
+            
+    
     def _clean_encoding_df(self, df: pd.DataFrame, object_cols: list):
         for object_col in object_cols:
             df[object_col] = df[object_col].apply(
@@ -197,6 +207,7 @@ class CleaningInputs:
         csv_list = self._list_files()
         for i in range(0, len(dfs_list)):
             df = dfs_list[i]
+            df = self._process_mbd_code_df(df)
             df.to_csv(f'{self.inputs_path}/{csv_list[i]}', index=False)
             
     
