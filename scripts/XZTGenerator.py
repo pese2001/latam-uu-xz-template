@@ -630,4 +630,5 @@ class XZTG:
             axis=1)
         cells_df.to_csv(f'{self.output_dir}/XZTemplate_v0.csv',
                         index=False)
+        print('XZTemplate_v0.csv has been saved to the outputs directory.')
         return cells_df
