@@ -241,6 +241,12 @@ class MBDCCImpcts:
         celladj = celladj[['Cell_ID', 'BAU_XFactor',
                            'VUE_XFactor', 'ADJ_XFactor']]
         impact_df = pd.merge(impacts, celladj, on='Cell_ID')
+        impact_df_message = '''
+        Consider that only the Cell_IDs from VUE_Impacts.csv that are also
+        present in XZTemplate_v0.csv will be considered. This match will result
+        in the Impacts dataframe.
+        '''
+        print(impact_df_message)
         impact_df['UnprojectedSales'] = np.round(
             impact_df['Baseline_Sales'] / impact_df['BAU_XFactor'], 2)
         impact_df['VUE_ProjectedSales'] = np.round(
@@ -336,6 +342,12 @@ class MBDCCImpcts:
         mbd_impacts = self.set_mbd_impacts()
         mbd_impact_df = pd.merge(mbd_impacts, mbd_nd,
                                  on=['MbdID', 'CategoryName'])
+        mbd_impact_df_message = '''
+        Consider that only the key Mbd_ID + CategoryName from Impacts dataframe that are also
+        present in MBD_NumDist.csv will be considered. This match will result
+        in the MBD_Impacts dataframe.
+        '''
+        print(mbd_impact_df_message)
         return mbd_impact_df
 
     def set_mbd_type(self):
@@ -371,6 +383,12 @@ class MBDCCImpcts:
         mbd_tt = mbd_tt[ucols]
         impact_df = self.set_mbd_nd()
         mbd_impacts = pd.merge(impact_df, mbd_tt, on='MbdID')
+        mbd_impacts_message = '''
+        Consider that only the Mbd_IDs from MBD_Impacts dataframe
+        that are also present in MBD_TypeTarget.csv will be considered. This match will result
+        in the MBDCat_Impacts_v0 dataframe.
+        '''
+        print(mbd_impacts_message)
         mbd_impacts['OutOfTarget'] = mbd_impacts.apply(
             lambda row:
                 self.out_of_target_mbd(
@@ -379,6 +397,7 @@ class MBDCCImpcts:
                 axis=1)
         mbd_impacts.to_csv(f'{self.output_dir}/MBDCat_Impacts_v0.csv',
                            index=False)
+        print('MBDCat_Impacts_v0.csv has been saved to the outputs directory.')
         return mbd_impacts
 
     def get_mbd_diagnostics(self):
@@ -420,6 +439,12 @@ class MBDCCImpcts:
         cell_df = self.set_cell_impacts()
         cell_diag = pd.merge(cell_df, mbd_df,
                              on=['MbdID', 'CategoryName'])
+        cell_diag_message = '''
+        Consider that only the key Mbd_ID + CategoryName from Impacts dataframe that are also
+        present in MBDCat_Impacts_v0.csv will be considered. This match will result
+        in the MBDCatCell_Impacts_v0 dataframe.
+        '''
+        print(cell_diag_message)
         cell_diag['MBDCatDiag'] = cell_diag.apply(
             lambda row: self.cellcat_cond(
                 row['CellCatTest'],
@@ -448,4 +473,5 @@ class MBDCCImpcts:
                                'MBDCatDiag']]
         cell_diag.to_csv(f'{self.output_dir}/MBDCatCell_Impacts_v0.csv',
                          index=False)
+        print('MBDCatCell_Impacts_v0.csv has been saved to the outputs directory.')
         return cell_diag
