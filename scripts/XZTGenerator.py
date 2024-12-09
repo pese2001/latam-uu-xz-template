@@ -98,6 +98,12 @@ class XZTG:
             inplace=True)
         cells_ch = self.cells_chars.copy()
         cells_df = pd.merge(cells_ch, cells_lp, on='Cell_ID')
+        cells_df_message = '''
+        Consider that only the Cell_IDs from Cells_Chars.csv that are also
+        present in Cells_LastPeriod.csv will be considered. This match will result
+        in the Cells BAU dataframe.
+        '''
+        print(cells_df_message)
         cells_df['BAU_XZRatio'] = cells_df['BAU_XFactor'] / \
             cells_df['BAU_ZFactor']
         return cells_df
@@ -212,6 +218,12 @@ class XZTG:
                                      'IBD_Name', 'IBD_ID', 'Cell_ID']},
                         inplace=True)
         cells = pd.merge(cells_df, vue_nspc, on='Cell_ID')
+        cells_message = '''
+        Consider that only the Cell_IDs from Cells BAU dataframe that are also
+        present in VUE_SampleNSPC.csv will be considered. This match will result
+        in the Cells dataframe.
+        '''
+        print(cells_message)
         cells['VUE_XZRatio'] = np.round(
             cells['VUE_XFactor'] / cells['VUE_ZFactor'], 4)
         cells['VUE_XZDistance'] = np.round((
