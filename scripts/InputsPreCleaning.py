@@ -2,7 +2,6 @@ import os
 import re
 import pandas as pd
 import unidecode
-import numpy as np
 
 cell_char_columns = ['INDEX',
                      'CHANNEL',
