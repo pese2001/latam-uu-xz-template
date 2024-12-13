@@ -336,24 +336,50 @@ class XZTG:
         Summary:
             Compares the signs of v1 and v2, handling cases where one or both values are zero.
         """
-        if v2 != 0:
-            if np.sign(v1/v2) == 1:
-                return 0
-            else:
-                return 1
-        elif (v2 == 0 and v1 != 0):
-            if np.sign(v2/v1) == 1:
-                return 0
-            else:
-                return 1
+        if v1*v2 < 0:
+            return 1
         else:
             return 0
+        
+    def gap_difference_test(self, 
+                            v1,
+                            v2,
+                            same_dir_gap_tolerance,
+                            diff_dir_gap_tolerance):
+        """
+        Perform a gap difference test between two values based on their direction and magnitude.
+
+        Args:
+            v1 (float): First value to compare.
+            v2 (float): Second value to compare.
+            same_dir_gap_tolerance (float): Tolerance threshold for values in the same direction.
+            diff_dir_gap_tolerance (float): Tolerance threshold for values in different directions.
+
+        Returns:
+            int: 
+                - 0 if the values are within the respective tolerance thresholds
+                - 1 if the values exceed their respective tolerance thresholds
+
+        Summary:
+            Determines whether two values have a significant gap based on their sign and magnitude.
+
+        """
+        try:
+            same_sign = (v1 * v2) / abs(v1 * v2)
+        except ZeroDivisionError:
+            same_sign = 1 if v1 > 0 else -1
+        var_x_z_diff = abs(v1 - v2)
+        if same_sign == 1:
+            return 1 if var_x_z_diff > same_dir_gap_tolerance else 0
+        else:
+            return 1 if var_x_z_diff > diff_dir_gap_tolerance else 0
 
     def cell_cond(self, 
                   v1, 
                   v2, 
                   v3, 
-                  v4):
+                  v4, 
+                  v5):
         """
         Determine the cell condition based on four input values.
 
@@ -369,7 +395,7 @@ class XZTG:
         Summary:
             Sums the input values and classifies the cell as 'Anomalous' or 'Normal'.
         """
-        if (v1 + v2 + v3 + v4) >= 2:
+        if (v1 + v2 + v3 + v4 + v5) >= 3:
             return 'Anomalous'
         else:
             return 'Normal'
@@ -551,37 +577,44 @@ class XZTG:
     def set_cell_flags(self, 
                        distance_param: float,
                        nspc_param: float, 
-                       xf_param: float):
+                       xf_param: float,
+                       same_dir_gap_tolerance: float,
+                       diff_dir_gap_tolerance: float):
         """
-        Set cell flags based on various tests.
+        Set cell flags based on various diagnostic tests.
 
         Args:
-            distance_param (float): Parameter for Distance test.
-            nspc_param (float): Parameter for NSPC test.
-            xf_param (float): Parameter for XF test.
+            distance_param (float): Threshold parameter for distance test.
+            nspc_param (float): Threshold parameter for NSPC (Number of Standard Periods to Cover) test.
+            xf_param (float): Threshold parameter for X-Factor test.
+            same_dir_gap_tolerance (float): Tolerance threshold for values in the same direction.
+            diff_dir_gap_tolerance (float): Tolerance threshold for values in different directions.
 
         Returns:
-            pd.DataFrame: DataFrame with added test result columns.
+            pd.DataFrame: DataFrame with additional test result columns.
 
         Summary:
-            Applies dtest, var_test, and sign_test to set flags for each cell.
-            
+            Applies multiple diagnostic tests to assess cell characteristics and variations.
+
         Step-by-step:
-        1. Call set_dummy_calc() to get the DataFrame with dummy calculations.
-        2. Add 'DTest' column:
-            a. Apply dtest method to 'VUE_XZDistance' for each row:
-                0 if the abs(row['VUE_XZDistance']) <= 3, 1 otherwise.
-        3. Add 'NSPCTest' column:
-            a. Apply var_test method to 'VAR_XUniverse (BAU vs ADJ)' using nspc_param for each row:
-                0 if abs(row['VAR_XUniverse (BAU vs ADJ)']) <= nspc_param, 1 otherwise.
-        4. Add 'XFTest' column:
-            a. Apply var_test method to 'VAR_XFactor (BAU vs ADJ)' using xf_param for each row:
-                0 if abs(row['VAR_XFactor (BAU vs ADJ)']) <= nspc_param, 1 otherwise.
-        5. Add 'SignTest' column:
-            a. Apply sign_test method to 'VAR_XUniverse (BAU vs ADJ)' and 'VAR_ZUniverse' for each row:
-                0 if the signs of row['VAR_XUniverse (BAU vs ADJ)'] and row['VAR_ZUniverse'] are the same, 1 if they are different.
-        6. Return the updated DataFrame with all new test result columns.
-        """
+        1. Call set_bau_vue_averages() to prepare the initial DataFrame
+        2. Add 'DTest' column by applying dtest to 'VUE_XZDistance':
+            - Returns 0 if absolute distance is within threshold
+            - Returns 1 if absolute distance exceeds threshold
+        3. Add 'NSPCTest' column by applying var_test to 'VAR_XUniverse (BAU vs ADJ)':
+            - Returns 0 if variation is within NSPC parameter
+            - Returns 1 if variation exceeds NSPC parameter
+        4. Add 'XFTest' column by applying var_test to 'VAR_XFactor (BAU vs ADJ)':
+            - Returns 0 if X-Factor variation is within threshold
+            - Returns 1 if X-Factor variation exceeds threshold
+        5. Add 'SignTest' column by applying sign_test to universe variations:
+            - Returns 0 if signs are the same
+            - Returns 1 if signs are different
+        6. Add 'VarDirectionGapTest' column by applying gap_difference_test:
+            - Checks gap between 'VAR_XUniverse (BAU vs ADJ)' and 'VAR_ZUniverse'
+            - Uses different tolerances for same and different directions
+        7. Return the DataFrame with all test result columns
+    """
         cells_df = self.set_bau_vue_averages()
         cells_df['DTest'] = cells_df.apply(lambda row: self.dtest(
             row['VUE_XZDistance'], distance_param), axis=1)
@@ -592,41 +625,52 @@ class XZTG:
         cells_df['SignTest'] = cells_df.apply(lambda row: self.sign_test(
             row['VAR_XUniverse (BAU vs ADJ)'], row['VAR_ZUniverse']),
             axis=1)
+        cells_df['VarDirectionGapTest'] = cells_df.apply(lambda row: self.gap_difference_test(
+            row['VAR_XUniverse (BAU vs ADJ)'], row['VAR_ZUniverse'], 
+            same_dir_gap_tolerance,
+            diff_dir_gap_tolerance),
+            axis=1)
         return cells_df
 
     def get_cell_diagnostics(self, 
                              distance_param: float,
                              nspc_param: float, 
-                             xf_param: float):
+                             xf_param: float,
+                             same_dir_gap_tolerance: float,
+                             diff_dir_gap_tolerance: float):
         """
-        Generate cell diagnostics and save results to a CSV file.
+        Generate comprehensive cell diagnostics and save results.
 
         Args:
-            distance_param (float): Parameter for Distance test.
-            nspc_param (float): Parameter for NSPC test.
-            xf_param (float): Parameter for XF test.
+            distance_param (float): Threshold parameter for distance test.
+            nspc_param (float): Threshold parameter for NSPC test.
+            xf_param (float): Threshold parameter for X-Factor test.
+            same_dir_gap_tolerance (float): Tolerance threshold for values in the same direction.
+            diff_dir_gap_tolerance (float): Tolerance threshold for values in different directions.
 
         Returns:
-            pd.DataFrame: DataFrame with cell diagnostics.
+            pd.DataFrame: DataFrame containing detailed cell diagnostic information.
 
         Summary:
-            Calls set_cell_flags, determines cell condition, and saves the result
-            to a CSV file in the output directory.
-            
+            Performs comprehensive cell diagnostics by applying multiple test flags 
+            and determining overall cell condition.
+
         Step-by-step:
-        1. Call set_cell_flags(nspc_param, xf_param) to get the DataFrame with cell flags.
-        2. Add 'CellDiagnostic' column:
-            - Apply cell_cond method to 'DTest', 'NSPCTest', 'XFTest', and 'SignTest' for each row:
-                - Sums row['DTest']. row['NSPCTest'], row['XFTest'], row['SignTest'].
-                - Classifies the cell as 'Anomalous' if the sum of inputs is 2 or greater, 'Normal' otherwise.
-        3. Save the resulting DataFrame to a CSV file:
+        1. Call set_cell_flags with all input parameters to generate test flags
+        2. Add 'CellDiagnostic' column by computing cell condition:
+            - Sum the test flags (DTest, NSPCTest, XFTest, SignTest)
+            - Classify cell as 'Anomalous' if sum is 2 or greater
+            - Classify cell as 'Normal' if sum is less than 2
+        3. Save the diagnostic results to a CSV file:
             - File path: {self.output_dir}/XZTemplate_v0.csv
-            - CSV is saved without the index column.
-        4. Return the final DataFrame with all diagnostics.
+            - Exclude index column from CSV export
+        4. Return the final DataFrame with all diagnostic information
         """
-        cells_df = self.set_cell_flags(distance_param, nspc_param, xf_param)
+        cells_df = self.set_cell_flags(distance_param, nspc_param, xf_param, 
+                                       same_dir_gap_tolerance, diff_dir_gap_tolerance)
         cells_df['CellDiagnostic'] = cells_df.apply(lambda row: self.cell_cond(
-            row['DTest'], row['NSPCTest'], row['XFTest'], row['SignTest']),
+            row['DTest'], row['NSPCTest'], row['XFTest'], row['SignTest'],
+            row['VarDirectionGapTest']),
             axis=1)
         cells_df.to_csv(f'{self.output_dir}/XZTemplate_v0.csv',
                         index=False)

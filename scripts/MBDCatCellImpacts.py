@@ -66,34 +66,63 @@ class MBDCCImpcts:
                  nspc_param: float, 
                  xf_param: float,
                  cell_cat_param: float, 
-                 cell_weight_param: float):
+                 cell_weight_param: float,
+                 same_dir_gap_tolerance: float,
+                 diff_dir_gap_tolerance: float):
         """
-        Initialize the MBDCCImpcts object.
+        Initialize the MBDCCImpcts (Micro Brand Development Cell Category Impacts) object.
 
         Args:
-            working_dir (str): The working directory path.
-            distance_param (float): Parameter for Distance test.
-            nspc_param (float): Parameter for NSPC calculations.
-            xf_param (float): Parameter for XF calculations.
-            cell_cat_param (float): Parameter for cell category calculations.
+            working_dir (str): Base directory path for project files and data.
+            distance_param (float): Parameter for Distance test calculations.
+            nspc_param (float): Parameter for NSPC (Number of Standard Periods to Cover) calculations.
+            xf_param (float): Parameter for X-Factor calculations.
+            cell_cat_param (float): Parameter for cell category computations.
             cell_weight_param (float): Parameter for cell weight calculations.
+            same_dir_gap_tolerance (float): Tolerance threshold for values in the same direction.
+            diff_dir_gap_tolerance (float): Tolerance threshold for values in different directions.
+
+        Returns:
+            None
 
         Summary:
-            Sets up directory paths, parameters, initializes XZTG object, and loads input CSV files.
-            
+            Initializes the MBDCCImpcts object by setting up directory paths, 
+            configuring parameters, and loading necessary input data.
+
         Step-by-step:
-        1. Set the working_dir attribute.
-        2. Set the input_dir attribute as '{working_dir}/inputs'.
-        3. Set the output_dir attribute as '{working_dir}/outputs'.
-        4. Set the nspc_param attribute.
-        5. Set the xf_param attribute.
-        6. Set the cc_param attribute to cell_cat_param.
-        7. Set the cw_param attribute to cell_weight_param.
-        8. Initialize the xztg attribute with an instance of XZTGen.XZTG(working_dir).
-        9. Set the cell_adj_df attribute by calling xztg.get_cell_diagnostics(nspc_param, xf_param).
-        10. Load MBD_NumDist.csv into the mbd_numdist attribute.
-        11. Load MBD_TypeTarget.csv into the mbd_typetarget attribute.
-        12. Load VUE_Impacts.csv into the vue_impacts attribute.
+        1. Set the working directory path
+        2. Construct input and output directory paths:
+            a. Input directory: {working_dir}/inputs
+            b. Output directory: {working_dir}/outputs
+        3. Store all input parameters as instance attributes
+        4. Initialize XZTGen XZTG object with the working directory
+        5. Generate cell diagnostics using:
+            - Distance parameter
+            - NSPC parameter
+            - X-Factor parameter
+            - Same direction gap tolerance
+            - Different direction gap tolerance
+        6. Load input CSV files:
+            a. MBD_NumDist.csv: Numerical distribution data
+            b. MBD_TypeTarget.csv: Type and target data
+            c. VUE_Impacts.csv: VUE impact data
+
+        Attributes Created:
+            - working_dir: Base working directory
+            - input_dir: Directory for input files
+            - output_dir: Directory for output files
+            - distance_param: Distance test parameter
+            - nspc_param: NSPC calculation parameter
+            - xf_param: X-Factor parameter
+            - cc_param: Cell category parameter
+            - cw_param: Cell weight parameter
+            - same_dir_gap_tolerance: Tolerance for same-direction variations
+            - diff_dir_gap_tolerance: Tolerance for different-direction variations
+            - xztg: XZTGen XZTG object
+            - cell_adj_df: DataFrame with cell diagnostics
+            - mbd_numdist: DataFrame with MBD numerical distribution data
+            - mbd_typetarget: DataFrame with MBD type and target data
+            - vue_impacts: DataFrame with VUE impact data
         """
         self.working_dir = working_dir
         self.input_dir = f'{self.working_dir}/inputs'
@@ -103,10 +132,14 @@ class MBDCCImpcts:
         self.xf_param = xf_param
         self.cc_param = cell_cat_param
         self.cw_param = cell_weight_param
+        self.same_dir_gap_tolerance = same_dir_gap_tolerance
+        self.diff_dir_gap_tolerance = diff_dir_gap_tolerance
         self.xztg = XZTGen.XZTG(self.working_dir)
         self.cell_adj_df = self.xztg.get_cell_diagnostics(self.distance_param,
                                                           self.nspc_param,
-                                                          self.xf_param)
+                                                          self.xf_param,
+                                                          self.same_dir_gap_tolerance,
+                                                          self.diff_dir_gap_tolerance)
         self.mbd_numdist = pd.read_csv(f'{self.input_dir}/MBD_NumDist.csv')
         self.mbd_typetarget = pd.read_csv(
             f'{self.input_dir}/MBD_TypeTarget.csv')
