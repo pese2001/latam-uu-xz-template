@@ -672,6 +672,7 @@ class XZTG:
             row['DTest'], row['NSPCTest'], row['XFTest'], row['SignTest'],
             row['VarDirectionGapTest']),
             axis=1)
+        cells_df.drop_duplicates(inplace=True, ignore_index=True)
         cells_df.to_csv(f'{self.output_dir}/XZTemplate_v0.csv',
                         index=False)
         print('XZTemplate_v0.csv has been saved to the outputs directory.')

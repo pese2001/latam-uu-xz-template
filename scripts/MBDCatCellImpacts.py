@@ -428,6 +428,7 @@ class MBDCCImpcts:
                     row['ADJ_SalesImpact'],
                     row['Target']),
                 axis=1)
+        mbd_impacts.drop_duplicates(inplace=True, ignore_index=True)
         mbd_impacts.to_csv(f'{self.output_dir}/MBDCat_Impacts_v0.csv',
                            index=False)
         print('MBDCat_Impacts_v0.csv has been saved to the outputs directory.')
@@ -504,6 +505,7 @@ class MBDCCImpcts:
                                'CellCatTest',
                                'OutOfTarget',
                                'MBDCatDiag']]
+        cell_diag.drop_duplicates(inplace=True, ignore_index=True)
         cell_diag.to_csv(f'{self.output_dir}/MBDCatCell_Impacts_v0.csv',
                          index=False)
         print('MBDCatCell_Impacts_v0.csv has been saved to the outputs directory.')

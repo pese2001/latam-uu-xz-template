@@ -404,6 +404,7 @@ class CleaningInputs:
         for i in range(0, len(dfs_list)):
             df = dfs_list[i]
             df = self._process_mbd_code_df(df)
+            df.drop_duplicates(inplace=True, ignore_index=True)
             df.to_csv(f'{self.inputs_path}/{csv_list[i]}', index=False)
         print('All input files were cleaned, and overwritten to match proper datatypes, encoding, and IDs format; only if needed.')
             
