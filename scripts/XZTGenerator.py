@@ -226,9 +226,14 @@ class XZTG:
         print(cells_message)
         cells['VUE_XZRatio'] = np.round(
             cells['VUE_XFactor'] / cells['VUE_ZFactor'], 4)
-        cells['VUE_XZDistance'] = np.round((
-            1 - (cells['VUE_ZFactor'] / cells['VUE_XFactor']))*np.sqrt(
-                cells['VUE_ZPanel']), 4) 
+        cells['VUE_XZDistance'] = cells.apply(lambda row: np.round(
+            max(abs(1 - (row['VUE_XFactor'] / row['VUE_ZFactor'])),
+                abs(1 - (row['VUE_ZFactor'] / row['VUE_XFactor']))) *
+            np.sqrt(row['VUE_ZPanel']) *
+            np.sign(row['VUE_XFactor'] - row['VUE_ZFactor']), 4), axis=1)
+        #cells['VUE_XZDistance'] = np.round((
+        #    1 - (cells['VUE_ZFactor'] / cells['VUE_XFactor']))*np.sqrt(
+        #        cells['VUE_ZPanel']), 4) 
         cells['Handler'] = cells.apply(lambda row: self.get_handler_value(
             row['Cell_Name']), axis=1)
         cells = cells[['INDEX', 
