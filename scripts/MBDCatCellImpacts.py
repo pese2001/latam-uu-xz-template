@@ -251,9 +251,9 @@ class MBDCCImpcts:
         3. Create a copy of cell_adj_df and select only 'Cell_ID' and X-Factor columns.
         4. Merge the impacts and celladj DataFrames on 'Cell_ID'.
         5. Calculate new columns:
-            a. 'UnprojectedSales': Baseline_Sales / BAU_XFactor (rounded to 2 decimals)
-            b. 'VUE_ProjectedSales': UnprojectedSales * VUE_XFactor (rounded to 2 decimals)
-            c. 'ADJ_ProjectedSales': UnprojectedSales * ADJ_XFactor (rounded to 2 decimals)
+            a. 'UnprojectedSales': Baseline_Sales / BAU_XFactor
+            b. 'VUE_ProjectedSales': UnprojectedSales * VUE_XFactor
+            c. 'ADJ_ProjectedSales': UnprojectedSales * ADJ_XFactor
             d. 'VUE_SalesImpact': Relative change between Baseline_Sales and VUE_ProjectedSales:
                 row['VUE_ProjectedSales'] / row['Baseline_Sales'] - 1
             e. 'ADJ_SalesImpact': Relative change between Baseline_Sales and ADJ_ProjectedSales:
@@ -280,12 +280,12 @@ class MBDCCImpcts:
         in the Impacts dataframe.
         '''
         print(impact_df_message)
-        impact_df['UnprojectedSales'] = np.round(
-            impact_df['Baseline_Sales'] / impact_df['BAU_XFactor'], 2)
-        impact_df['VUE_ProjectedSales'] = np.round(
-            impact_df['UnprojectedSales'] * impact_df['VUE_XFactor'], 2)
-        impact_df['ADJ_ProjectedSales'] = np.round(
-            impact_df['UnprojectedSales'] * impact_df['ADJ_XFactor'], 2)
+        impact_df['UnprojectedSales'] = (
+            impact_df['Baseline_Sales'] / impact_df['BAU_XFactor'])
+        impact_df['VUE_ProjectedSales'] = (
+            impact_df['UnprojectedSales'] * impact_df['VUE_XFactor'])
+        impact_df['ADJ_ProjectedSales'] = (
+            impact_df['UnprojectedSales'] * impact_df['ADJ_XFactor'])
         impact_df['VUE_SalesImpact'] = self.relative_change(
             impact_df['Baseline_Sales'], impact_df['VUE_ProjectedSales'])
         impact_df['ADJ_SalesImpact'] = self.relative_change(
